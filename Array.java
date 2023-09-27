@@ -1,28 +1,85 @@
+import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
       
-      MyArray arr = new MyArray(5);
-      arr.addValue(0,23);
-      arr.addValue(1,24);
-      arr.addValue(2,25);
-      arr.addValue(3,26);
-      arr.addValue(4,27);
-      arr.ViewElements();
+      System.out.print("Enter Array Size: ");
+      int size = scan.nextInt();
       
-      arr.RemoveValue(1);
-      arr.ViewElements();
+      MyArray arr = new MyArray(size);
+      int choice = 0;
+      do{
+         System.out.println("1. Add Element");
+         System.out.println("2. View Elements");
+         System.out.println("3. Remove an Element");
+         System.out.println("4. Search Element");
+         System.out.println("5. Sort Elements");
+         System.out.println("6. Edit Elements");
+         System.out.println("7. Exit");
       
-      int searchResult = arr.Search(5);
-      if(searchResult != -1 ){
-         System.out.println("The Value is found in index " + searchResult);
+         System.out.print("Enter Your Choice: ");
+         choice = scan.nextInt();
+      
+         switch(choice){
+            case 1:
+               System.out.print("Enter Array Index: ");
+               int index = scan.nextInt();
+               System.out.print("Enter The Value: ");
+               int value = scan.nextInt();
+               arr.addElement(index, value);
+               break;
+            
+            case 2:
+               arr.ViewElements();
+               break;
+            
+            case 3: 
+               System.out.print("Enter the index of the value you want to remove: ");
+               int remove = scan.nextInt();
+               arr. RemoveElement(remove);
+               break;
+            
+            case 4:
+               System.out.print("Enter the value that you want to Search: ");
+               int search = scan.nextInt();
+            
+               int searchResult = arr.Search(search);
+            
+               if(searchResult != -1 ){
+                 System.out.println("The Value is found in index " + searchResult);
+               }
+               else{
+                 System.out.println("The Value is not found");
+               }
+               break;
+            
+            case 5:
+               System.out.println("1. Ascending");
+               System.out.println("2. Descending");
+               System.out.print("Enter Your Choice: ");
+               int ch = scan.nextInt();
+            
+               switch(ch){
+                  case 1:
+                     arr.Sort();
+                     arr.ViewElements();
+               } 
+          
+            case 6: 
+               System.out.print("Enter the Array Index you want to Edit: ");
+               int edit = scan.nextInt();
+               System.out.print("Enter The Value: ");
+               int val = scan.nextInt();
+               arr.Edit(edit, val);
+               arr.ViewElements();
+               break;
+            
+            case 7:
+               System.out.println("Program Finished!");
+               break;
       }
-      else{
-         System.out.println("The Value is not found");
-      }
-      
-      arr.Sort();
-      arr.ViewElements();
-
+     }
+     while(choice != 7);             
    }
 }
 
@@ -35,14 +92,14 @@ class MyArray {
         array = new int[size];
     }
 
-    public void addValue(int index, int value) {
+    public void addElement(int index, int value) {
         if (index >= 0 && index < size) {
              array[index] = value;
         } else {
             System.out.println("Invalid index for adding a value.");
         } 
     }
-    public void RemoveValue(int index){
+    public void RemoveElement(int index){
       if (index >= 0 && index < size) {
              array[index] = 0;
         } else {
@@ -76,7 +133,6 @@ class MyArray {
             }
         }
     } 
-
     public void ViewElements() {
         System.out.println("Array: " + java.util.Arrays.toString(array));
     }
