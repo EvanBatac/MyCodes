@@ -18,23 +18,23 @@ public class TOA
 		        double MoalboalDistance = 86.7;
 		        int estHour = (int)MoalboalDistance/speed;
 		        int estMinutes = (int)(MoalboalDistance%speed) * 60 / speed;
-              System.out.println("Cebu, City(Emall) - Start");
-              System.out.println("Route 1 - Minglanilla, Cebu");
-              System.out.println("Route 2 - San Fernando, Cebu");
-              System.out.println("Route 3 - Carcar, Cebu");
-              System.out.println("Route 4 - Barili, Cebu");
-              System.out.println("Route 5 - Dumanjug, Cebu");
-              System.out.println("Route 6 - Alcantara, Cebu");
-              System.out.println("End(Moalboal, Cebu)");
-              System.out.println("Speed: " + speed + " km/hr");
-              System.out.println("Total Distance: " + MoalboalDistance);
+              		System.out.println("Cebu, City(Emall) - Start");
+              		System.out.println("Route 1 - Minglanilla, Cebu");
+              		System.out.println("Route 2 - San Fernando, Cebu");
+              		System.out.println("Route 3 - Carcar, Cebu");
+              		System.out.println("Route 4 - Barili, Cebu");
+              		System.out.println("Route 5 - Dumanjug, Cebu");
+              		System.out.println("Route 6 - Alcantara, Cebu");
+              		System.out.println("End(Moalboal, Cebu)");
+              		System.out.println("Speed: " + speed + " km/hr");
+              		System.out.println("Total Distance: " + MoalboalDistance);
 		        System.out.println("Estimated Time Arrival: " + estHour + " Hour/s " + estMinutes + " Minutes");
-              break;
+              		break;
 		     case 'Y':
-              System.out.print("Enter your Speed in Kilometers: ");
+              		System.out.print("Enter your Speed in Kilometers: ");
 		        speed = scan.nextInt();
               
-              System.out.print("Is Dumanjug, Cebu obstructed? (Y/N)");
+              		System.out.print("Is Dumanjug, Cebu obstructed? (Y/N)");
 		        char ch2 = scan.next().toUpperCase().charAt(0);
               
               switch(ch2){
@@ -58,7 +58,7 @@ public class TOA
                    case 'Y':
                      double MoalboalDistance3 = 131.6;
                      int estHour3 = (int)MoalboalDistance3/speed;
-		               int estMinutes3 = (int)(MoalboalDistance3%speed) * 60 / speed;
+		     int estMinutes3 = (int)(MoalboalDistance3%speed) * 60 / speed;
                      System.out.println("Cebu, City(Emall) - Start");
                      System.out.println("Route 1 - Minglanilla, Cebu");
                      System.out.println("Route 2 - San Fernando, Cebu");
