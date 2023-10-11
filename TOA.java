@@ -15,7 +15,7 @@ public class TOA
 		        System.out.print("Enter your Speed in Kilometers: ");
 		        int speed = scan.nextInt();
 		        
-		        double MoalboalDistance = 86.7;
+		        double MoalboalDistance = 84.9;
 		        int estHour = (int)MoalboalDistance/speed;
 		        int estMinutes = (int)(MoalboalDistance%speed) * 60 / speed;
               		System.out.println("Cebu, City(Emall) - Start");
@@ -39,7 +39,7 @@ public class TOA
               
               switch(ch2){
                   case 'N':
-                     double MoalboalDistance2 = 124.7;
+                     double MoalboalDistance2 = 96.2;
                      int estHour2 = (int)MoalboalDistance2/speed;
 		               int estMinutes2 = (int)(MoalboalDistance2%speed) * 60 / speed;
                      System.out.println("Cebu, City(Emall) - Start");
@@ -52,7 +52,7 @@ public class TOA
                      System.out.println("End(Moalboal, Cebu)");
                      System.out.println("Speed: " + speed + " km/hr");
                      System.out.println("Total Distance: " + MoalboalDistance2);
-		               System.out.println("Estimated Time Arrival: " + estHour2 + " Hour/s " + estMinutes2 + " Minutes");
+		     System.out.println("Estimated Time Arrival: " + estHour2 + " Hour/s " + estMinutes2 + " Minutes");
                      break;
                      
                    case 'Y':
@@ -70,7 +70,7 @@ public class TOA
                      System.out.println("End(Moalboal, Cebu)");
                      System.out.println("Speed: " + speed + "km/hr");
                      System.out.println("Total Distance: " + MoalboalDistance3);
-		               System.out.println("Estimated Time Arrival: " + estHour3 + " Hour/s " + estMinutes3 + " Minutes");
+		     System.out.println("Estimated Time Arrival: " + estHour3 + " Hour/s " + estMinutes3 + " Minutes");
                      break;
 
 
